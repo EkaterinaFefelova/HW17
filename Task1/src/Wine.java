@@ -60,6 +60,8 @@ public class Wine {
     }
 
     public int getAgeInYears (LocalDate currentDate){
-        return Period.between(this.manufactureDate, currentDate).getYears();
+        int age = Period.between(this.manufactureDate, currentDate).getYears();
+        System.out.println("Выдержка вина составляет " + age + " лет");
+        return age;
     }
 }
