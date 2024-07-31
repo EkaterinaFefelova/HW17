@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Wine {
     private String name;
@@ -59,6 +60,6 @@ public class Wine {
     }
 
     public int getAgeInYears (LocalDate currentDate){
-        return currentDate.getYear()-this.manufactureDate.getYear();
+        return Period.between(this.manufactureDate, currentDate).getYears();
     }
 }
